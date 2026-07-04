@@ -12,3 +12,23 @@ function tryLuck() {
     }
 
 }
+
+function calculateSubscription() {
+
+    var months = parseInt(document.getElementById("monthBox").value);
+    var fee = parseFloat(document.getElementById("feeBox").value);
+
+    if (isNaN(months) || isNaN(fee)) {
+        document.getElementById("totalBox").value = "Please enter valid numbers.";
+        return;
+    }
+
+    var total = months * fee;
+
+    if (months >= 12) {
+        total = total * 0.85;
+    }
+
+    document.getElementById("totalBox").value = "$" + total.toFixed(2);
+
+}

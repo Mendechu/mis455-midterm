@@ -114,3 +114,14 @@ input, textarea {
     font-weight: bold;
     color: #1c7ed6;
 }
+
+.work-images {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.work-images img {
+    width: 50%;
+    border-radius: 8px;
+}

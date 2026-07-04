@@ -26,10 +26,18 @@ function calculateSubscription() {
     var total = months * fee;
 
     if (months >= 12) {
-        total = total * 0.85;
-    }
+        var discount = total * 0.15;
+        var finalTotal = total - discount;
 
-    document.getElementById("totalBox").value = "$" + total.toFixed(2);
+        document.getElementById("totalBox").value =
+            "Original: $" + total.toFixed(2) +
+            " | Discount: $" + discount.toFixed(2) +
+            " | Final: $" + finalTotal.toFixed(2);
+    }
+    else {
+        document.getElementById("totalBox").value =
+            "Total: $" + total.toFixed(2) + " (No discount for you)";
+    }
 
 }
 
